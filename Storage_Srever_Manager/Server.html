@@ -1,0 +1,164 @@
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- 可选的Bootstrap主题文件（一般不使用） -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+.title
+{
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	border-color: #337ab7;
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.label label-success {
+    background-color: #5cb85c;
+}
+.body {
+    padding: 15px;
+}
+.status
+{
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.status status-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.status {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+</style>
+<div class= "server_info">
+<div class= "title">
+<h2>Server Info</h2>
+</div>
+<div class = "body">
+	::before
+	<div class = "status">
+	<div align="left">
+	Server status is
+	<span class="label label-success">
+	Idle</span>
+	</div>
+	<div class="server_table">
+		<table class="table">
+			<thead>
+					<tr>
+                      <th>Machine</th>
+                      <th>Arch</th>
+                      <th>OS</th>
+                      <th>Notes</th>					
+                      <th>Status</th>
+					  <th>Owner</th>
+					</tr>
+	<tbody>
+	<tr>
+	<td>waikikibeach5</td>
+		<td>x86_64</td>
+		<td>Linux-4.10.10-200.fc25.x86_64</td>
+		<td>Mellanox ConnectX-4(mlx5) RNIC. NVMe and NVMe-oF test machine.</td>
+		<td><span class="label label-success">Free</span></td>
+		<td>Wenzhong</td>
+	</tr>
+	<tr>
+		<td>waikikibeach6</td>
+		<td>x86_64</td>
+		<td>Linux-3.10.0-693.11.1.el7.x86_64-x86_64-with-centos-7.4.1708-Core</td>
+		<td>NVMe and Blockdev virtual test machine</td>
+		<td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>fedora-01</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>NVMe and Event virtual test machine</td>
+			<td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>fedora-02</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>iSCSI and Ceph RBD virtual test machine</td>
+			<td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>fedora-03</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>1x Intel P3700 NVMe; Mellanox ConnectX-4(mlx5) RNIC. NVMe and NVMe-oF test machine.</td>
+			<td><span class="label label-success">Free</span>
+			</td></tr>
+		<tr>
+			<td>fedora-04</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>BlobFS + RocksDB test machine</td>
+			<td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>fedora-05</td>
+			<td>x86_64</td><td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>Unit test + vhost (VM)</td>
+			<td><span class="label label-success">Free</span>
+			</td></tr>
+		<tr>
+			<td>fedora-06</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>iSCSI and NVMe-oF virtual test machine; Soft-RoCE NIC</td>
+			<td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>fedora-07</td>
+			<td>x86_64</td>
+			<td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>VHost/FIO virtual test machine</td>
+			<td><span class="label label-success">Free</span></td></tr>
+		<tr><td>fedora-08</td><td>x86_64</td><td>Linux-4.13.16-202.fc26.x86_64-x86_64-with-fedora-26-Twenty_Six</td>
+			<td>vhost</td><td><span class="label label-success">Free</span></td></tr><tr><td>freebsd-0</td>
+			<td>x86_64</td><td>FreeBSD-11.1-RELEASE-p1-amd64-64bit-ELF</td><td>1x Intel P3700 NVMe</td>
+			<td><span class="label label-success">Free</span></td></tr><tr><td>ubuntu14.04</td>
+			<td>x86_64</td><td>Linux-3.13.0-137-generic-x86_64-with-Ubuntu-14.04-trusty</td>
+			<td>NVMe and Blockdev virtual test machine</td><td><span class="label label-success">Free</span></td></tr>
+		<tr>
+			<td>ubuntu16.04</td><td>x86_64</td>
+			<td>Linux-4.4.0-104-generic-x86_64-with-Ubuntu-16.04-xenial</td>
+			<td>NVMe and Blockdev virtual test machine</td><td><span class="label label-success">Free</span></td></tr>
+		<tr><td>ubuntu17.04</td><td>x86_64</td>
+				<td>Linux-4.10.0-42-generic-x86_64-with-Ubuntu-17.04-zesty</td>
+				<td>NVMe and Blockdev virtual test machine</td>
+				<td><span class="label label-success">Free</span></td>
+		</tr>
+			</tbody>
+			<thead>
+		<table>
+	</div>
+	</div>
+	
+</div>
+</div>

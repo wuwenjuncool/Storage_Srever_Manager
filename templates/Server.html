@@ -1,0 +1,112 @@
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- 可选的Bootstrap主题文件（一般不使用） -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  function change_status(id)
+{
+  alert("********")
+  document.getElementById("status").className.replace("label label-danger");
+}
+</script>
+<style>
+.title
+{
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	border-color: #337ab7;
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.label label-success {
+    background-color: #5cb85c;
+}
+.body {
+    padding: 15px;
+}
+.status
+{
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.status status-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.status {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+</style>
+
+<div class= "server_info">
+<div class= "title">
+<h2>Server Info</h2>
+</div>
+<div class = "body">
+	::before
+	<div class = "status">
+	<div align="left">
+	Server status is
+	<span class="label label-success">
+	Idle</span>
+	</div>
+	<div class="server_table">
+		<table class="table">
+			<thead>
+					<tr>
+                      <th>Machine</th>
+                      <th>Arch</th>
+                      <th>OS</th>
+                      <th>Notes</th>					
+                      <th>Status</th>
+					  <th>Owner</th>
+					</tr>
+	<tbody>
+        {% for server in server_all %} 
+    <tr>
+        <td>{{ server.name }}</td>
+		<td>x86_64</td>
+        <td>{{ server.kernel }}</td>
+        <td>{{ server.nic }}</td>
+		<td id="status" onclick="change_status(this)"> <span class="label
+                label-success"><select>
+                
+                </select></span></td>
+        <td>{{ server.owner }}</td>
+	</tr>
+        {% endfor %}
+			</tbody>
+			<thead>
+		<table>
+	</div>
+	</div>
+	
+</div>
+</div>
